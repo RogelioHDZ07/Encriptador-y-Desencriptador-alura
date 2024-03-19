@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="encriptador.css">
+    <title>Encriptador y Desencriptador</title>
+</head>
+
+<body>
+    <main id="container">
+
+        <header>
+            <h1>Encriptador y Desencriptador</h1>
+        </header>
+
+        <div class="caja-usuario">
+            <textarea class="texto-usuario" id="texto" type="text" placeholder="Texto"
+                onkeyup="minusculas(this);"></textarea>
+            <ul>
+                <li><input onclick="btnEncriptador();" class="botones" type="submit" value="Encriptador"></li>
+                <li><input onclick="btnDesencriptador();" class="botones" type="submit" value="Desencriptador"></li>
+            </ul>
+        </div>
+        <div class="caja-informacion">
+            <img id="img-cambio" src="img/wait.png" alt="Esperando-Informacion">
+            <h2 id="parrafo-exitoso">Esperando tu texto</h2>
+            <div class="copiado-texto">
+                <p class="previsto">Tu texto:</p>
+                <p id="texto-reflejado"></p>
+                <button id="btn1" class="btn-copiar" onclick="btnCopiar();"><img class="img-copiar" src="img/copia.png" alt="copiar"></button>
+            </div>
+            <div class="copiado-texto">
+                <p class="previsto">Encriptado:</p>
+                <p id="texto-encriptado"></p>
+                <button id="btn2" class="btn-copiar" onclick="btnCopiar2();"><img class="img-copiar" src="img/copia.png" alt="copiar"></button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="copyright">&copy copyright Encriptaroger - 2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
